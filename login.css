@@ -1,0 +1,645 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh; /* Ensure at least full viewport height */
+    background-color: #FFFFFF;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .umak {
+        font-size: 2rem;
+    }
+    
+    .register > a,
+    .contact > a,
+    .try > a,
+    .news > a,
+    .sched > a,
+    .gall > a,
+    .about > a,
+    .home > a {
+        font-size: 1.2rem;
+    }
+
+    /* Add more responsive adjustments as needed */
+}
+
+
+.umak {
+    display: flex;
+    max-width: 760px;
+    height: 48px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem; /* Responsive font size */
+    font-weight: 800;
+    float: inline-end;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header1 {
+    width: 100%;
+    height: 60px;
+    background-color: #111C4E;
+    flex-shrink: 0;
+}
+
+.register > a,
+.contact > a,
+.try > a,
+.news > a,
+.sched > a,
+.gall > a,
+.about > a,
+.home > a{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 800;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-right: 20px;
+    float: inline-end;
+    text-size-adjust: 100%;
+    
+    
+}
+
+.logo1{
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    float: left;
+    margin-left: 20px;
+    position: absolute;
+
+}
+.logo2{
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center; 
+    float: left;
+    margin-left: 120px;
+    position: absolute;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input {
+    outline-color: #ffc700;
+    margin: 10px 0;
+}
+
+input[type=text] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    border: none;
+    border-radius: 16px;
+}
+
+input[type=password] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    border: none;
+    border-radius: 16px;
+}
+
+button {
+    width: 100%;
+    background: #FFC700;
+    color: #000000;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    font-style: italic;
+    color: #9db1cc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    background-color: #9DB1CC;
+    width: 100%;
+    align-content: center;
+    background: linear-gradient(rgba(6, 11, 84, 0.6), rgba(6, 11, 84, 0.6)), url("images/99.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-container {
+    background: #111C4E;
+    margin: 100px;
+    padding: 50px;
+    width: 500px;
+    flex-basis: 30%;
+    align-content: center;
+    border: 8px solid #fff;
+}
+
+.login-logo-wrapper {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.login-logo {
+    width: 130px; 
+    height: 100%;
+    padding: 10px;
+}
+
+.login-title {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    margin: 60px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: #111C4E;
+    position: relative  ;
+    margin-top: 1%;
+    flex-direction: row;
+
+}
+
+.footlogo{
+    width: 5%;
+    height: 5%;
+    flex-shrink: 0;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    float: left;
+    position: relative;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.container2{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color:#111C4E;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+
+
+}
+.foot1{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-style: normal;
+    line-height: normal;
+    font-weight: 800;
+    position: relative;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.foot2{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-style: normal;
+
+    line-height: normal;
+    font-weight: 600;
+    position: relative;
+    white-space: nowrap;
+}
+.foot3{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-weight: 400;
+    position: relative;
+    width: max(45ch, 50%);
+    text-align: left;
+      
+}
+
+.foot4 > a{
+    color: #FFC700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.1rem, 1vw, 1rem);
+    font-style: normal;
+    line-height: normal;
+    font-weight: 600;
+
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+
+}
+
+.container3{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #111C4E;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    
+
+}
+
+.got1{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-weight: 800;
+    margin-left: 0px;
+    margin-top: 3%;
+    float: right;
+    margin-right: 3%;
+
+    white-space: nowrap;
+}
+
+.got2{
+    width: 100%;
+    height: 50%;
+    flex-shrink: 0;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    background: #FFC700;
+    position: relative;
+    border-radius: 54px;
+    margin-top: 2%;
+    
+}
+
+.got3 > a{
+    color: #111C4E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+    text-align: center;
+}
+
+.follow1{
+    color: #9DB1CC;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    float: right;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 5%;
+}
+
+.fb{
+    width: 29px;
+    height: 32px;
+    flex-shrink: 0;
+    background: url(images/fb.png), no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+}
+
+.fb1 > a{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 100px;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    text-decoration: none;
+}
+.tiktok {
+    width: 29px;
+    height: 32px;
+    flex-shrink: 0;
+    background: url(images/tiktok.png), no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    
+}
+
+.tiktok1 > a {
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 80px;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    text-decoration: none;
+}
+
+
+.container{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color:#111C4E;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+
+}
+.container1{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color:#111C4E;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+.quicklinks,
+.followus{
+    color: #9DB1CC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.quick{
+    color: #9DB1CC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    float: right;
+    position: relative;
+
+}
+
+.roster > a,
+.About > a,
+.schedule > a,
+.common > a,
+.cont > a
+{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    Display: flex;
+    text-decoration: none;
+    text-size-adjust: 100%;
+}
+
+.footlast{
+    width: 100%;
+    height: 43px;
+    flex-shrink: 0;
+    background: #06143B;
+
+}
+.footlast1{
+    width: auto;
+    height: 25px;
+    flex-shrink: 0;
+    background: #111C4E;
+
+}
+
+.hct,
+.all{
+    color: #FFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+}
+.hct{
+    float: inline-start;
+    margin-left: 20px;
+
+}
+
+.all {
+float: inline-end;
+margin-right: 30px;
+
+}
