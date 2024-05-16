@@ -565,6 +565,7 @@ margin-right: 30px;
     margin-left: 0px;
     background-color: #111c4e;
     padding: 50px;
+    align-content: center;
 }
 
 .registration-container h2 {
@@ -616,7 +617,7 @@ margin-right: 30px;
 .role-selection label {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
+    font-weight: 500;
     font-size: 27px;
     margin-left: 15px;
 
@@ -624,10 +625,10 @@ margin-right: 30px;
     gap: 0.25em;
 }
 
-.registration-form input[type=text], [type=password], [type=email] {
+.registration-form input[type=email] {
     display: block;
-    width: 100%;
-    padding: 15px;
+    width: 98%;
+    padding: 15px 10px;
     margin: 10px 0;
     border-radius: 16px;
     border: none;
@@ -637,10 +638,20 @@ margin-right: 30px;
     color: black;
 }
 
-.registration-form input::placeholder {
-    font-style: italic;
-    color: rgba(128, 128, 128, 0.412);
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
 }
+
+input::placeholder {
+    font-style: italic;
+    color: #9DB1CC;
+}
+
 
 a.appform:link, :visited{
     background-color: #ffc700;
@@ -648,13 +659,13 @@ a.appform:link, :visited{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
     font-size: 30px;
-    padding: 10px;
-    margin-top: 40px;
+    padding: 15px 5px;
+    margin: 40px 0 0;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 99.5%;
     text-align: center;
     text-decoration: none;
 }
