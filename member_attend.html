@@ -68,117 +68,29 @@
 
 
 
-                
-                
-                <div class="calender">      
-                  <div class="cal-container">
-                    <div class="prev">&#10094;</div>
-                    <div class="month">May<br>
-                      <span style="font-size:18px">2024</span>
-                    </div>
-                    <div class="next">&#10095;</div>
-                  </div>
-                  
-                
-                <ul class="weekdays">
-                  <li>Monday</li>
-                  <li>Tuesday</li>
-                  <li>Wednesday</li>
-                  <li>Thursday</li>
-                  <li>Friday</li>
-                  <li>Saturday</li>
-                  <li>Sunday</li>
-                </ul>
-                
-                <ul class="days">  
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                  <li>8</li>
-                  <li>9</li>
-                  <li><span class="active">10</span></li>
-                  <li>11</li>
-                  <li>12</li>
-                  <li>13</li>
-                  <li>14</li>
-                  <li>15</li>
-                  <li>16</li>
-                  <li>17</li>
-                  <li>18</li>
-                  <li>19</li>
-                  <li>20</li>
-                  <li>21</li>
-                  <li>22</li>
-                  <li>23</li>
-                  <li>24</li>
-                  <li>25</li>
-                  <li>26</li>
-                  <li>27</li>
-                  <li>28</li>
-                  <li>29</li>
-                  <li>30</li>
-                  <li>31</li>
-                </ul>
-                
-                <div class="section">
-                    <div class="form-container-attendance">
-                        <div class="section-title">
-                            <h2>ATTENDANCE</h2>
-                        </div>
-                      <form class="attendance-form" action="/submit-attendance" method="post">
-                        <div class="form-row-radio">
-                            <h2>STATUS: *</h2>
-                            <div class="radio-group">
-                                <label><input type="radio" id="present" name="status" value="present">Present</label>
-                                <label><input type="radio" id="absent" name="status" value="absent">Absent</label>
-                            </div>
-                          </div>
-                        <div class="form-row">
-                          <label for="date">DATE:</label>
-                            <input type="date" id="date" name="date" readonly>
-                        </div>
-                        <div class="form-row">
-                          <label for="coach">COACH:</label>
-                          <input type="text" id="coach" name="coach" placeholder="CURRENT COACH" readonly>
-                        </div>
-                        <div class="form-row">
-                          <label for="time_in">TIME IN: *</label>
-                          <input type="time" id="time_in" name="time_in" required>
-                        </div>
-                        <div class="form-row">
-                            <label for="time_in">TIME OUT: *</label>
-                            <input type="time" id="time_in" name="time_in" required>
-                          </div>
-                        <div class="form-actions">
-                          <button type="submit" class="custom-button">Submit</button>
-                        </div>
-                      </form>
-                    </div>
-                  
-                  
-                                      
-                    <div class="form-container-feedback">
-                        <div class="section-title">
-                            <h2>COACH FEEDBACK</h2>
-                        </div>
-                      <form action="/submitted-feedback" method="get">
-                        <div class="form-row">
-                          <label for="coach-name">COACH NAME:</label>
-                          <input type="text" id="coach-name" name="coach_name" readonly>
-                        </div>
-                        <div class="form-row-comment">
-                          <label for="comment">COMMENT:</label>
-                          <textarea id="comment" name="comment" readonly></textarea>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
 
 
+        <div class="section">
+            <div class="calendar-container">
+                <div class="calendar">
+                    <div class="month-picker" id="month-picker"></div>
+                    <div class="month-list"></div>
+                    <div class="calendar-header">
+                        
+                        <div id="pre-year">&lt;</div>
+                        <div id="year"></div>
+                        <div id="next-year">&gt;</div>
+                    </div>
+                    <div class="calendar-box">
+                        <div class="calendar-body">
+                            <div class="calendar-days"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-list"></div>
+        </div>
+        <script src="member_attend.js"></script>
 
 
 

@@ -32,8 +32,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
 .footer{
     width: 100%;
     height: auto;
@@ -571,78 +569,7 @@ textarea {
     color: black;
     border: none;
     border-radius: 16px;
-}
-
-input[type=date] {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19px;
-    font-weight: 500;
-    color: black;
-    border: none;
-    border-radius: 16px;
-}
-
-input[type=time] {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19px;
-    font-weight: 500;
-    color: black;
-    border: none;
-    border-radius: 16px;
-}
-
-select {
-    display: block;
-    width: 50%;
-    padding: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19px;
-    font-weight: 500;
-    color: black;
-    border: none;
-    border-radius: 16px;
-    display: grid;
-}
-
-input[type=radio] {
-    appearance: none;
-    /* For iOS < 15 to remove gradient background */
-    background-color: #fff;
-    /* Not removed via appearance */
-    margin: 0;
-    font: inherit;
-    color: white;
-    width: 0.7em;
-    height: 0.7em;
-    border: 0.09em solid #111c4e;
-    border-radius: 50%;
-    margin-right: 8px;
-    transform: translateY(-0.075em);
-    margin-top: 0.5em;
-
-    display: grid;
-    place-content: center;
-}
-
-input[type=radio]::before {
-    content: "";
-    width: 0.7em;
-    height: 0.7em;
-    border: 0.09em solid #111c4e;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em #ffc700;
-}
-
-input[type=radio]:checked::before {
-    transform: scale(1);
+    resize: none;
 }
 
 input::placeholder,
@@ -735,90 +662,101 @@ label {
 
 
 
-span {
-    color: #ffc700;
-}
 
 
-.calender {
+
+
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #111c4e;
     margin-top: 20px;
 }
 
-.cal-container {
+.calendar-header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 30px;
-    width: 100%;
-    background: #111c4e;
-    text-align: center;
-  }
-  
-  
-  .month {
-    color: white;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 10px 0;
+    background: #111C4E;
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    position: absolute;
-  }
-  
-.prev {
-    font-size: 50px;
-    font-weight: bold;
-    color: #ffc700;
-    padding: 0px 50px;
-  }
-  
-.next {
-    font-size: 50px;
-    font-weight: bold;
-    color: #ffc700;
-    padding: 0px 50px;
-  }
-  
-  .weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
-  }
-  
-  .weekdays li {
-    display: inline-block;
+    cursor: pointer;
+    width: 50%;
+    
+}
+
+.month-picker{
+    color:#ffc700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
-    font-size: 15px;
-    width: 13.6%;
-    color: #111c4e;
-    text-align: center;
-  }
-  
-  .days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-  }
-  
-  .days li {
+    font-size: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.month-list {
+    display: none;
+    color:#FFFF;
+    cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
+    font-size: 20px;
+}
+
+.month-list.show {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
     text-align: center;
-    margin-bottom: 5px;
-    font-size:25px;
-    color: #111c4e;
-  }
-  
-  .days li .active {
-    padding: 5px;
-    background: #ffc700;
-    color: white;
-  }
-  
+    padding: 20px 0;
+}
+
+.calendar-body {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    
+}
+
+.dayCell {
+    padding: 20px 20px;
+
+}
+
+.current-date {
+    background-color: #9DB1CC;
+    color:black;
+    border: none;
+    border-radius: 25%;
+    font-weight: 500;
+}
+
+.event-list {
+    margin-top: 20px;
+
+}
+
+
+
+
 
 
 
@@ -847,18 +785,18 @@ span {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 50px;
+    padding: 20px;
 }
 
-
-.form-container-attendance {
+.form-container-feedback {
     background: #F1F1F1;
-    flex-basis: 40%;
+    flex-basis: 50%;
+    margin: 0;
     color: #111c4e;
     padding: 50px;
 }
 
-.form-container-feedback {
+.form-container-nofeedback {
     background: #F1F1F1;
     flex-basis: 20%;
     margin-left: 0px;
@@ -872,8 +810,15 @@ span {
     font-weight: 800;
     font-size: 42px;
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 0;
+    margin: 20px 0;
+}
+
+.section-title h1{
+    color: #111c4e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
 }
 
 .form-row {
@@ -924,56 +869,33 @@ span {
 
 
 
+.card {
+    max-width: 20rem;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+   
+  .star {
+    -webkit-text-stroke: 2px #111c4e;
+    font-size: 50px;
+  }
+  
+   
+  .one {
+    color: #ffc700;
+  }
+   
+  .two {
+    color: #ffc700;
+  }
+   
+  .three {
+    color: #ffc700;
+  }
+   
+  .four {
+    color: #ffc700;
+  }
+   
+  .five {
+    color: #ffc700;
+  }
