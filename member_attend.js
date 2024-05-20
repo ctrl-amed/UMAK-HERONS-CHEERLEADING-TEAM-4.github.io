@@ -106,7 +106,7 @@ const displayEvents = (date) => {
         <div class="section-title">
             <h2>COACH FEEDBACK</h2> 
         </div>
-        <form action="/submitted-feedback" method="get"> 
+        
             <div class="form-row"> 
                 <div class="card"> 
                     <label>Performance Rating</label> 
@@ -125,6 +125,9 @@ const displayEvents = (date) => {
             </div> 
         </form> 
         </div>`;
+
+        
+
 
     if (events[date]) {
         events[date].forEach((event) => {
@@ -188,17 +191,24 @@ let stars =
     document.getElementsByClassName("star");
 let output = 
     document.getElementById("output");
-let initialRating = 0;
+let initialRating = localStorage.getItem('performanceRating') || 0;
     
-// Funtion to update rating
-function updateRatingDisplay(n) {
-    Array.from(stars).forEach((star, index) => {
-        star.classList.remove('one', 'two', 'three', 'four', 'five');
-        if (index < n) {
-            star.classList.add(n === 1 ? 'one' : n === 2 ? 'two' : n === 3 ? 'three' : n === 4 ? 'four' : 'five');
-        }
-    });
-    output.innerText = `Rating is: ${n}/5`;
+function gfg(n) {
+    remove();
+    for (let i = 0; i < n; i++) {
+        if (n == 1) cls = "one";
+        else if (n == 2) cls = "two";
+        else if (n == 3) cls = "three";
+        else if (n == 4) cls = "four";
+        else if (n == 5) cls = "five";
+        stars[i].className = "star " + cls;
+    }
+    output.innerText = "Rating is: " + n + "/5";
 }
- 
+
+function updateRatingFromStorage() {
+    const rating = localStorage.getItem('performanceRating') || 0;
+    updateRatingDisplay(rating);
+}
+
 updateRatingDisplay(initialRating);

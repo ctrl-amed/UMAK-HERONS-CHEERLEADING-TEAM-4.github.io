@@ -58,68 +58,7 @@
             </div>
 
             <div class="containera">
-                <form class="containerb" action="" method="post">
-                    <div class="containercoach">
-                        <div class="text">TRAINING INFO</div>
-                        <div class="line"></div>
-                        <div class="containerd">
-                            <div class="containere">
-                            <div class="text1">
-                                DATE:<input type="date" id="date" name="date" required> <br>
-                            </div>
-                            </div>
-
-                            <div class="containere">
-                                <div class="text1">
-                                    COACH:<input type="text" id="coach" name="coach" placeholder="CURRENT COACH" required> <br>
-                                </div>
-                                </div>
-                                <div class="containere">
-                                    <div class="text1">
-                                        POINTS:
-                                    
-                                        <input list="PointList" placeholder="INPUT POINTS" required>
-                                        <datalist id="PointList">
-                                            <option value="1 Point">
-                                        </datalist>
-                                </div>
-                            </div>
-
-                            <div class="containere">
-                                <div class="text1">
-                                    DURATION:
-                                
-                                    <input list="HourList" placeholder="INPUT HOURS" required>
-                                    <datalist id="HourList">
-                                        <option value="1 Hour">
-                                        <option value="2 Hours">
-                                        <option value="3 Hours">
-                                        <option value="4 Hours">
-                                    </datalist>
-                            </div>
-                        </div>
-
-                        <div class="containerh">
-                            <button type="submit">Post</button>
-                        </div>
-
-                                
-
-                        </div>
-                    </div>
-                </form>
-
-
-
-
-
-
-
-
-
-
-
-
+                
 
 
 
@@ -133,7 +72,7 @@
                             <div class="text1">
                                 MEMBER:
                             
-                                <input list="NotifyMemberList" placeholder="MEMBER NAME" required>
+                                <input list="NotifyMemberList" placeholder="MEMBER NAME">
                                 <datalist id="NotifyMemberList">
                                     <option value="Kyle Angelo">Kyle Angelo</option>
                                         <option value="Rhose Anne">Rhose Anne</option>
@@ -165,7 +104,7 @@
                         <div class="text2">
                             MESSAGE:
                             <div class="containerg">
-                            <textarea id="MESSAGE" name="MESSAGE" required></textarea>
+                            <textarea id="MESSAGE" name="MESSAGE"></textarea>
                         </div>
                         </div>
                         
@@ -222,20 +161,45 @@
                         </div>
                     </div>
 
-
+                    <div class="containerf">
+                        <form id="ratingForm" action="/submitted-feedback" method="post"> 
+                            <div class="text2">
+                                <label>PERFORMANCE RATING:</label>  
+                                <div class="card"> 
+                                    
+                                    <span onclick="gfg(1)"
+                                    class="star" data-value="1">★
+                                    </span>
+                                    <span onclick="gfg(2)"
+                                    class="star" data-value="2">★
+                                    </span>
+                                    <span onclick="gfg(3)"
+                                    class="star" data-value="3">★
+                                    </span>
+                                    <span onclick="gfg(4)"
+                                    class="star" data-value="4">★
+                                    </span>
+                                    <span onclick="gfg(5)"
+                                    class="star" data-value="5">★
+                                    </span>
+                                        
+                                </div> 
+                                <label id="output"> Rating is: 0/5 </label> 
+                            </div> 
+                    </div>
 
                     <div class="containerf">
                         
                         <div class="text2">
-                            COMMENT:
+                            ADDITIONAL COMMENT:
                             <div class="containerg">
-                            <textarea id="COMMENT" name="COMMENT" required></textarea>
+                            <textarea id="COMMENT" name="COMMENT"></textarea>
                         </div>
                         </div>
                         
                 </div>
                 <div class="containerh">
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit">Submit</button>
                 </div>
                 </div>
                     </div>
