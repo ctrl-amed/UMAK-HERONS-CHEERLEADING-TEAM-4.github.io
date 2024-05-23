@@ -34,59 +34,78 @@ document.getElementById("COMMENT").addEventListener("input", function() {
 
 
 
-let stars = document.querySelectorAll(".star");
-let output = document.getElementById("output");
 
-stars.forEach(star => {
+
+
+
+const stars = document.querySelectorAll(".star");
+const output = document.getElementById("output");
+let xhr = null; // store the XHR object
+
+// Function to handle click event on stars
+stars.forEach((star, index) => {
     star.addEventListener("click", () => {
-        const rating = parseInt(star.getAttribute("data-value"));
+        rating = index + 1;
         localStorage.setItem('performanceRating', rating);
-
+        updateRating();
     });
 });
 
-function gfg(n) {
-    remove();
-    for (let i = 0; i < n; i++) {
-        if (n == 1) cls = "one";
-        else if (n == 2) cls = "two";
-        else if (n == 3) cls = "three";
-        else if (n == 4) cls = "four";
-        else if (n == 5) cls = "five";
-        stars[i].className = "star " + cls;
-    }
-    output.innerText = "Rating is: " + n + "/5";
-}
+// Function to update rating display
+function updateRating() {
+    stars.forEach((star, index) => {
+      if (index < rating) {
+        star.classList.add('active');
+      } else {
+        star.classList.remove('active');
+      }
+    });
+    output.textContent = `Rating is: ${rating}/5`;
+  }
 
-// To remove the pre-applied styling
-function remove() {
-    let i = 0;
-    while (i < 5) {
-        stars[i].className = "star";
-        i++;
-    }
-}
-
-let initialRating = localStorage.getItem('performanceRating') || 0;
-updateRatingDisplay(initialRating);
-
-document.getElementById("submitBtn").addEventListener("click", () => {
-    if (!userRating) {
-        alert(
-"Please select a rating before submitting."
-             );
+  let isRequestInProgress = false;
+// Event listener for submit button
+document.getElementById("submit").addEventListener("click", () => {
+    if (rating === 0) {
+        alert("Please select a rating before submitting.");
         return;
     }
-    if (userRating > 0) {
-        rating.innerText = "0";
-        stars.forEach((s) => s.classList.remove("one", 
-                                                "two", 
-                                                "three", 
-                                                "four", 
-                                                "five", 
-                                                "selected"));
+    if (isRequestInProgress) {
+        return; // prevent duplicate submissions
     }
+    isRequestInProgress = true;
+    if (xhr) { // cancel previous fetch request
+        xhr.abort();
+    }
+    xhr = sendRatingToServer(rating);
+    updateRatingDisplay(0);
+    this.disabled = true; // disable the submit button
 });
+
+// Function to send rating to the server using fetch API
+async function sendRatingToServer(rating) {
+    try {
+        const response = await fetch("coach_input_to_member_attend.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `rating=${encodeURIComponent(rating)}`
+        });
+
+        if (!response.ok) {
+            throw new Error(`Request failed.  Returned status of ${response.status}`);
+        }
+
+        // Handle the response here
+
+    } catch (error) {
+        console.error(error);
+    } finally {
+        isRequestInProgress = false; // reset the flag
+        this.disabled = false; // re-enable the submit button
+    }
+}
 
 
 

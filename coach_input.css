@@ -743,52 +743,6 @@ input[type='text']::placeholder {
 
 }
 
-input[list='HourList'] {
-    /* Remove default browser styles */
-    appearance: none;
-    -webkit-appearance: none; /* For older versions of webkit-based browsers */
-    
-    /* Your custom styling */
-    /* Example styles */
-    border: 1px solid white;
-    border-radius: 20px;
-    padding: 2%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: clamp(1.2rem, 0.5vw, 1.5rem);
-    font-weight: 600;
-    color: #333;
-    background-color: #fff;
-    margin-left: 3%;
-    width: 45%;
-    min-width: 40%;
-}
-
-/* Style for when the input is focused */
-input[list='HourList']:focus {
-    outline: none; /* Remove the default focus outline */
-    border-color: #FFC700; /* Example focus color */
-    /* Add any additional focus styles */
-}
-
-/* Style for the datalist */
-datalist#HourList {
-    /* Add your custom styles for the datalist */
-    /* Example styles */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: clamp(1rem, 0.5vw, 1.5rem);
-    font-weight: 600;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-input[list='HourList']::placeholder {
-  
-    color: #9DB1CC;
-    font-style: italic; 
-}
 
 
 
@@ -1044,27 +998,11 @@ input[list='FeedbackMemberList']::placeholder {
    
   .star {
     -webkit-text-stroke: 2px #111c4e;
+    /* default color */
     font-size: 50px;
     cursor: pointer;
   }
   
-   
-  .one {
-    color: #ffc700;
-  }
-   
-  .two {
-    color: #ffc700;
-  }
-   
-  .three {
-    color: #ffc700;
-  }
-   
-  .four {
-    color: #ffc700;
-  }
-   
-  .five {
-    color: #ffc700;
+  .star.active {
+    color: #ffd700; /* active color */
   }
